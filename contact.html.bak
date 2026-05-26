@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | ankesefotos</title>
+    <link rel="icon" href="assets/cross-2-svgrepo-com.svg" type="image/svg+xml">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Google Fonts: Spectral, Tangerine -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body style="background-color: var(--color-bg);">
+
+    <header class="contact-hero-scaffold">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent absolute-top py-3">
+            <div class="container">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+
+                    <!-- Left Links -->
+                    <div class="nav-side-links d-flex align-items-center flex-grow-1 justify-content-start">
+                        <a class="nav-link mx-3" href="index.html">home</a>
+                        <a class="nav-link mx-3" href="#">Gallery</a>
+                    </div>
+
+                    <!-- Centered Brand -->
+                    <div class="navbar-brand-container text-center px-4">
+                        <a class="navbar-brand brand-font m-0" href="index.html">anke.se.fotos</a>
+                    </div>
+
+                    <!-- Right Links -->
+                    <div class="nav-side-links d-flex align-items-center flex-grow-1 justify-content-end">
+                        <a class="nav-link mx-3" href="#">About me</a>
+                        <a class="nav-link mx-3" href="contact.html">Contact</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-5 mt-5">
+        <div class="container py-5 text-center">
+            <h1 class="font-serif display-4 mb-4">Contact Me</h1>
+            <p class="lead font-serif">Get in touch for bookings and inquiries.</p>
+            <!-- Content will be added later -->
+        </div>
+    </main>
+
+    <footer class="footer-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Branding & Socials -->
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <h3 class="brand-font footer-brand mb-3">ankesefotos</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/anke.se.fotos/" target="_blank" class="me-3 text-decoration-none text-dark"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="mailto:anckevdschyff12@gmail.com" class="text-decoration-none text-dark"><i class="bi bi-envelope fs-4"></i></a>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <div class="footer-nav">
+                        <a href="index.html" class="footer-link mx-2">home</a>
+                        <a href="#" class="footer-link mx-2">Gallery</a>
+                        <a href="#" class="footer-link mx-2">About me</a>
+                        <a href="contact.html" class="footer-link mx-2">Contact</a>
+                    </div>
+                </div>
+                <!-- Copyright -->
+                <div class="col-md-4 text-center text-md-end">
+                    <p class="copyright-text mb-0">&copy; All content copyright of ankesefotos Photography 2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Contact | ankesefotos">
+    <header class="contact-hero-scaffold">
+    </header>
+
+    <main class="py-5 mt-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7">
+                    <div class="contact-header text-center mb-5">
+                        <h1 class="font-serif display-4 mb-3">get in touch</h1>
+                        <p class="lead font-serif opacity-75">I would love to hear from you and capture your story.</p>
+                    </div>
+
+                    <form id="contactForm" class="contact-form">
+                        <div class="row g-5">
+                            <!-- Name -->
+                            <div class="col-12">
+                                <div class="form-floating border-bottom-only">
+                                    <input type="text" class="form-control" id="name" placeholder="First and Last Name" required>
+                                    <label for="name">First and Last Name</label>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-12">
+                                <div class="form-floating border-bottom-only">
+                                    <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                    <label for="email">Email Address</label>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                            </div>
+
+                            <!-- Shoot Type -->
+                            <div class="col-12">
+                                <div class="form-floating border-bottom-only">
+                                    <select class="form-select" id="shootType" aria-label="Type of shoot" required>
+                                        <option value="" selected disabled>Select type of shoot</option>
+                                        <option value="wedding">Wedding</option>
+                                        <option value="family">Family</option>
+                                        <option value="couple">Couple / Engagement</option>
+                                        <option value="event">Event</option>
+                                    </select>
+                                    <label for="shootType">Type of shoot</label>
+                                    <div class="invalid-feedback">Please select a shoot type.</div>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="col-12">
+                                <div class="form-floating border-bottom-only">
+                                    <input type="text" class="form-control" id="location" placeholder="Shoot Location" required>
+                                    <label for="location">Shoot Location</label>
+                                    <div class="invalid-feedback">Please specify a location.</div>
+                                </div>
+                            </div>
+
+                            <!-- Date -->
+                            <div class="col-12">
+                                <div class="form-floating border-bottom-only">
+                                    <input type="date" class="form-control" id="date" placeholder="Preferred Date" required>
+                                    <label for="date">Preferred Date</label>
+                                    <div class="invalid-feedback">Please select a date.</div>
+                                </div>
+                            </div>
+
+                            <!-- Language -->
+                            <div class="col-12">
+                                <div class="form-floating border-bottom-only">
+                                    <select class="form-select" id="language" aria-label="Preferred Language">
+                                        <option value="english" selected>English</option>
+                                        <option value="afrikaans">Afrikaans</option>
+                                    </select>
+                                    <label for="language">Preferred Language for Communication</label>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="col-12">
+                                <div class="form-floating border-bottom-only">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px" maxlength="500"></textarea>
+                                    <label for="message">Message (max 500 characters)</label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-12 text-center mt-5">
+                                <button type="submit" id="submitBtn" class="btn btn-dark btn-lg rounded-0 px-5 py-3 font-serif text-uppercase letter-spacing-2">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</MainLayout>
+
+<script>
+    import '../scripts/contact.ts';
+</script>

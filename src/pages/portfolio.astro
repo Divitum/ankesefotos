@@ -1,0 +1,65 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Image } from 'astro:assets';
+
+// Import images
+import ludaWedding from '../assets/luda-wedding.jpg';
+import jancaCoena from '../assets/janca-coena.jpg';
+import nldFamily from '../assets/nld-family.jpg';
+import graduation from '../assets/graduation.jpg';
+import kissBw from '../assets/kiss-bw.jpg';
+import kneeling from '../assets/kneeling.jpg';
+import cover1 from '../assets/cover1.jpg';
+import kneelingBw from '../assets/kneeling-bw.jpg';
+
+const shoots = [
+    { id: 1, title: "Luda & Stefan", image: ludaWedding, category: "Wedding" },
+    { id: 2, title: "Janca & Coena", image: jancaCoena, category: "Couples" },
+    { id: 3, title: "NLD Family", image: nldFamily, category: "Family" },
+    { id: 4, title: "Class of 2024", image: graduation, category: "Events" },
+    { id: 5, title: "The Kiss", image: kissBw, category: "Couples" },
+    { id: 6, title: "Grace", image: kneeling, category: "Portraits" },
+    { id: 7, title: "Elegance", image: cover1, category: "Wedding" },
+    { id: 8, title: "Quiet Moments", image: kneelingBw, category: "Portraits" }
+];
+---
+
+<MainLayout title="Portfolio | ankesefotos">
+    <header class="contact-hero-scaffold">
+    </header>
+
+    <main class="py-5 mt-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="portfolio-header text-center mb-5">
+                        <h1 class="font-serif display-4 mb-3">portfolio</h1>
+                        <p class="lead font-serif opacity-75">A collection of stories captured in time.</p>
+                    </div>
+
+                    <div class="row g-4">
+                        {shoots.map(shoot => (
+                            <div class="col-6 col-md-3">
+                                <a href="#" class="service-link text-decoration-none">
+                                    <div class="service-item">
+                                        <div class="service-image-wrapper mb-3">
+                                            <Image src={shoot.image} alt={shoot.title} class="img-fluid service-img" />
+                                        </div>
+                                        <h5 class="service-title font-serif">{shoot.title}</h5>
+                                        <p class="text-uppercase small letter-spacing-1 opacity-50 mb-0" style="font-size: 0.7rem;">{shoot.category}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</MainLayout>
+
+<style>
+    .letter-spacing-1 {
+        letter-spacing: 1px;
+    }
+</style>

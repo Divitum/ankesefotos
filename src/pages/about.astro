@@ -1,0 +1,86 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { Image } from 'astro:assets';
+import ankeBriel from '../assets/janca-coena.jpg'; // Using an existing image as a placeholder for Anke
+import kissBw from '../assets/kiss-bw.jpg';
+---
+
+<MainLayout title="About Me | ankesefotos">
+    <header class="contact-hero-scaffold">
+    </header>
+
+    <main class="py-5 mt-5">
+        <div class="container py-lg-5">
+            <!-- First Story Section -->
+            <div class="row align-items-center g-5 mb-5 pb-lg-5">
+                <!-- Text Content -->
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="about-me-text pe-lg-5">
+                        <h1 class="font-serif display-3 mb-4 lh-1">I believe every moment holds a story worth telling.</h1>
+                        <p class="lead font-serif mb-4 opacity-75">Hi, I'm Anke Briel. Based in South Africa, I specialize in capturing the raw, authentic emotions that make your life unique. From the quiet whispers of a wedding day to the joyful chaos of a family session, my goal is to provide you with memories that feel as real as the moments themselves.</p>
+                        <p class="font-serif opacity-75">With a focus on natural light and timeless composition, I strive to create art that transcends trends. When I'm not behind the lens, you can find me exploring the beauty of our local landscapes or enjoying a quiet cup of coffee, always looking for the next story to tell.</p>
+                    </div>
+                </div>
+                <!-- Image -->
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <div class="about-me-image-wrapper">
+                        <Image src={ankeBriel} alt="Anke Briel" class="img-fluid rounded-0 shadow-sm" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Story Section: Photo on Left -->
+            <div class="row align-items-center g-5 mt-5 pt-lg-5">
+                <!-- Image -->
+                <div class="col-lg-6">
+                    <div class="about-me-image-wrapper">
+                        <Image src={kissBw} alt="My Approach" class="img-fluid rounded-0 shadow-sm" />
+                    </div>
+                </div>
+                <!-- Text Content -->
+                <div class="col-lg-6">
+                    <div class="about-me-text ps-lg-5">
+                        <h2 class="font-serif display-4 mb-4 lh-1">A passion for the unposed and the real.</h2>
+                        <p class="font-serif mb-4 opacity-75">My journey into photography began with a simple desire to preserve the fleeting beauty of everyday life. I don't just want to take pictures; I want to capture how a moment felt. This philosophy drives every click of my shutter, ensuring that your gallery is a true reflection of your personality and connection.</p>
+                        <p class="font-serif opacity-75">Whether it's the nervous excitement before a ceremony or the quiet intimacy of a couple's session, I am there to document your story with grace and authenticity. Let's create something beautiful together.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Verse-style Section -->
+        <section class="verse-section text-center my-5 py-5">
+            <div class="container">
+                <p class="verse-text mb-2">Capturing the light in every soul.</p>
+                <p class="verse-reference mb-0">Anke Briel</p>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section text-center py-5">
+            <div class="container">
+                <a href="/contact" class="btn btn-dark btn-lg rounded-0 px-5 py-3 font-serif text-uppercase letter-spacing-2">
+                    Let's tell your story!
+                </a>
+            </div>
+        </section>
+    </main>
+</MainLayout>
+
+<style>
+    .lh-1 {
+        line-height: 1.1;
+    }
+    .letter-spacing-2 {
+        letter-spacing: 2px;
+    }
+    .about-me-image-wrapper {
+        aspect-ratio: 4 / 5;
+        overflow: hidden;
+    }
+    .about-me-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>

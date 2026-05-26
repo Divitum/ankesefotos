@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\chris\\WebstormProjects\\ankesefotos\\logs\\.9f03eb8ac2c251d21c7471931e5a50f7f9cf5102-audit.json",
+    "files": [
+        {
+            "date": 1779535583189,
+            "name": "C:\\Users\\chris\\WebstormProjects\\ankesefotos\\logs\\mcp-puppeteer-2026-05-23.log",
+            "hash": "3e23a6d02a1969520c884ac6eb8ca3de346312bbc7171a9b86984cdda15cf886"
+        },
+        {
+            "date": 1779725237040,
+            "name": "C:\\Users\\chris\\WebstormProjects\\ankesefotos\\logs\\mcp-puppeteer-2026-05-25.log",
+            "hash": "aa49c6db5d44bcdc969632a3646855df3914ecd568ffaa7d2441b06d2f897077"
+        },
+        {
+            "date": 1779808306076,
+            "name": "C:\\Users\\chris\\WebstormProjects\\ankesefotos\\logs\\mcp-puppeteer-2026-05-26.log",
+            "hash": "70ca738aba337ab4a8935601b19ecf48530349f5cf4d45a1dd9b8abf69fec845"
+        }
+    ],
+    "hashType": "sha256"
+}

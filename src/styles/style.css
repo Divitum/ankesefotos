@@ -1,0 +1,490 @@
+/* Custom Styles for ankesefotos */
+
+:root {
+    --color-bg: #F5EBE6;
+    --color-text-main: #2C2520;
+    --color-accent: #D4A373;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Spectral', serif;
+}
+
+/* Typography Classes */
+.font-serif {
+    font-family: 'Spectral', serif;
+}
+
+.font-sans {
+    font-family: 'Spectral', serif; /* Spectral used for all except brand */
+}
+
+/* Navbar Behavior */
+.absolute-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background: url('../assets/cover1.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* About Section */
+.about-section {
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    display: flex;
+    align-items: center;
+}
+
+.about-img {
+    max-height: 85vh;
+    width: auto;
+    object-fit: cover;
+}
+
+.about-text-content h2 {
+    font-family: 'Spectral', serif;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.about-text-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Optional: Subtle overlay to make white text pop more if image is bright */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Very light dark overlay */
+    z-index: 1;
+}
+
+/* Navbar overrides */
+.navbar {
+    z-index: 1001;
+}
+
+.brand-font {
+    font-family: 'MADE Mirage', 'Spectral', serif; 
+    font-size: 3rem; /* Slightly larger as it's a hero brand */
+    text-transform: lowercase;
+    color: #fff !important;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+.nav-link {
+    font-family: 'Spectral', serif;
+    color: #fff !important;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    text-transform: uppercase; /* Links in uppercase */
+    letter-spacing: 1px; /* Added slight tracking for uppercase readability */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+/* Ensure equal sizing for side containers to keep brand perfectly centered */
+.nav-side-links {
+    flex-basis: 0;
+}
+
+@media (max-width: 991.98px) {
+    .brand-font {
+        font-size: 1.8rem; /* Scaled down for mobile */
+    }
+    .nav-link {
+        margin-left: 0.25rem !important; /* Reduced margin */
+        margin-right: 0.25rem !important;
+        font-size: 0.75rem; /* Smaller font for mobile links */
+    }
+    .navbar-brand-container {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    .about-text-content h2 {
+        font-size: 2.2rem;
+    }
+    .about-img {
+        max-height: 60vh;
+    }
+}
+
+.custom-vh-65 {
+    height: 65vh;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.testimonial-text-col {
+    background-color: var(--color-bg);
+    min-height: 100%; /* Fill the container height */
+}
+
+.testimonial-quote {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: var(--color-text-main);
+}
+
+.testimonial-author {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.testimonial-img {
+    object-fit: cover;
+    height: 65vh !important; /* Match section height */
+}
+
+/* Custom Navigation */
+.testimonial-nav {
+    position: absolute;
+    left: 33.333333%; /* Align with the split (roughly 30-40%) */
+    bottom: 10%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.custom-nav-btn {
+    position: relative !important;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: transparent !important; /* Removed background block */
+    opacity: 0.6 !important;
+    margin: 0 10px;
+    border: none;
+    transition: opacity 0.3s ease;
+}
+
+.custom-nav-btn:hover {
+    opacity: 1 !important;
+    background-color: transparent !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(100) brightness(0); /* Make arrows dark for contrast on cream bg */
+}
+
+@media (max-width: 767.98px) {
+    .testimonial-img {
+        height: 50vh !important;
+    }
+    .testimonial-nav {
+        left: 50%;
+        bottom: 45%; /* Position between image and text when stacked */
+    }
+    .testimonial-text-col {
+        min-height: 50vh;
+        order: 2;
+    }
+    .col-md-8 {
+        order: 1;
+    }
+}
+
+/* Verse Section */
+.custom-vh-60 {
+    height: 60vh;
+}
+
+.verse-section {
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    padding: 3rem 1rem;
+}
+
+.verse-text {
+    font-family: 'Tangerine', cursive;
+    font-size: 3.5rem; /* Tangerine is naturally small/delicate, so increasing size */
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-text-main);
+}
+
+.verse-reference {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+@media (max-width: 767.98px) {
+    .verse-text {
+        font-size: 1.4rem;
+    }
+}
+
+/* Services Section */
+.services-section {
+    background-color: #fff;
+    color: var(--color-text-main);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: none;
+    opacity: 0.8;
+}
+
+.service-link {
+    display: block;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.service-link:hover {
+    opacity: 0.7;
+}
+
+.service-image-wrapper {
+    overflow: hidden;
+    aspect-ratio: 3 / 4; /* Consistent portrait aspect ratio */
+}
+
+.service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-item:hover .service-img {
+    transform: scale(1.05);
+}
+
+.service-title {
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+@media (max-width: 767.98px) {
+    .service-title {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+}
+
+.custom-vh-75 {
+    height: 75vh;
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/kneeling-bw.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: none;
+}
+
+.btn-outline-light {
+    border-width: 1px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: var(--color-text-main);
+}
+
+@media (max-width: 767.98px) {
+    .contact-title {
+        font-size: 2.5rem;
+    }
+    .contact-section .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .contact-section .btn {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+}
+
+.contact-hero-scaffold {
+    background-color: var(--color-text-main);
+    height: 30vh;
+    min-height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-brand {
+    font-size: 2rem;
+    color: var(--color-text-main) !important;
+}
+
+.footer-link {
+    color: var(--color-text-main);
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.6;
+}
+
+.copyright-text {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    text-transform: none;
+}
+
+@media (max-width: 767.98px) {
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Contact Page Form Styles */
+.border-bottom-only {
+    border-bottom: 1px solid rgba(44, 37, 32, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+.border-bottom-only:focus-within {
+    border-color: var(--color-text-main);
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    color: var(--color-text-main);
+    box-shadow: none;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.contact-form .form-floating > label {
+    padding-left: 0;
+    opacity: 0.6;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-form .form-floating > .form-control:focus ~ label,
+.contact-form .form-floating > .form-control:not(:placeholder-shown) ~ label,
+.contact-form .form-floating > .form-select ~ label {
+    opacity: 0.8;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0);
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+.btn-dark {
+    background-color: var(--color-text-main);
+    border-color: var(--color-text-main);
+    transition: all 0.3s ease;
+}
+
+.btn-dark:disabled {
+    background-color: var(--color-text-main);
+    border-color: var(--color-text-main);
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Validation Feedback Styles */
+.invalid-feedback {
+    display: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    color: #b02a37;
+}
+
+/* Explicitly show feedback when the parent has the invalid class */
+.is-invalid-parent .invalid-feedback {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Ensure the border also changes */
+.is-invalid-parent .form-control,
+.is-invalid-parent .form-select {
+    border-bottom: 1px solid #b02a37 !important;
+}
+
+/* Remove Bootstrap Icons and defaults */
+.form-control.is-invalid, 
+.form-select.is-invalid {
+    background-image: none !important;
+    padding-right: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+    .contact-header h1 {
+        font-size: 2.5rem;
+    }
+}

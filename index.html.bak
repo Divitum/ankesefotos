@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ankesefotos | Wedding Photography by Anke Briel</title>
+    <link rel="icon" href="assets/cross-2-svgrepo-com.svg" type="image/svg+xml">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Google Fonts: Spectral, Tangerine -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <header class="hero-section">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent absolute-top py-3">
+            <div class="container">
+                <div class="d-flex w-100 align-items-center justify-content-between">
+
+                    <!-- Left Links -->
+                    <div class="nav-side-links d-flex align-items-center flex-grow-1 justify-content-start">
+                        <a class="nav-link mx-3" href="index.html">home</a>
+                        <a class="nav-link mx-3" href="#">Gallery</a>
+                    </div>
+
+                    <!-- Centered Brand -->
+                    <div class="navbar-brand-container text-center px-4">
+                        <a class="navbar-brand brand-font m-0" href="index.html">anke.se.fotos</a>
+                    </div>
+
+                    <!-- Right Links -->
+                    <div class="nav-side-links d-flex align-items-center flex-grow-1 justify-content-end">
+                        <a class="nav-link mx-3" href="#">About me</a>
+                        <a class="nav-link mx-3" href="contact.html">Contact</a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-overlay"></div>
+    </header>
+
+    <!-- Content for scrolling -->
+    <main>
+        <section class="about-section">
+            <div class="container h-100">
+                <div class="row g-0 align-items-center h-100 min-vh-100">
+                    <div class="col-md-6 text-center py-5 py-md-0">
+                        <div class="image-wrapper p-3 p-lg-5">
+                            <img src="assets/kiss-bw.jpg" alt="Anke Briel - Wedding Photography" class="img-fluid about-img shadow-sm">
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center py-5 py-md-0">
+                        <div class="about-text-content px-4 px-lg-5">
+                            <h2 class="font-serif mb-4">anke briel</h2>
+                            <p class="font-sans opacity-75 mb-3">I believe that every wedding is a unique story waiting to be told. My passion is to capture those fleeting moments of love and connection that make your day unforgettable.</p>
+                            <p class="font-sans opacity-75">From the quiet whispers to the joyous celebrations, I am here to preserve your most precious memories in their purest and most beautiful form.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section class="testimonials-section custom-vh-65 position-relative">
+            <div id="testimonialCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                <div class="carousel-inner h-100">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="carousel-item active h-100">
+                        <div class="container-fluid h-100 p-0">
+                            <div class="row g-0 h-100 align-items-center">
+                                <div class="col-md-4 testimonial-text-col d-flex align-items-center">
+                                    <div class="px-4 px-lg-5 text-center text-md-start">
+                                        <p class="testimonial-quote font-serif italic mb-4">"Anke captured our wedding day with such grace and beauty. Every photo feels like a work of art."</p>
+                                        <h4 class="testimonial-author font-serif">— Sarah & James</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 h-100">
+                                    <div class="testimonial-image-wrapper h-100">
+                                        <img src="assets/kneeling.jpg" class="d-block w-100 h-100 testimonial-img" alt="Wedding Couple">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="carousel-item h-100">
+                        <div class="container-fluid h-100 p-0">
+                            <div class="row g-0 h-100 align-items-center">
+                                <div class="col-md-4 testimonial-text-col d-flex align-items-center">
+                                    <div class="px-4 px-lg-5 text-center text-md-start">
+                                        <p class="testimonial-quote font-serif italic mb-4">"The best decision we made for our wedding. The moments she caught are simply magical."</p>
+                                        <h4 class="testimonial-author font-serif">— Elena & Mark</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 h-100">
+                                    <div class="testimonial-image-wrapper h-100">
+                                        <img src="assets/cover1.jpg" class="d-block w-100 h-100 testimonial-img" alt="Bride and Groom">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Custom Navigation Arrows -->
+                <div class="testimonial-nav d-flex">
+                    <button class="carousel-control-prev custom-nav-btn" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next custom-nav-btn" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Verse Section -->
+        <section class="verse-section custom-vh-60 d-flex align-items-center justify-content-center">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <p class="verse-text mb-4">"And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him."</p>
+                        <span class="verse-reference font-serif">— Colossians 3:17</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section class="services-section min-vh-100 d-flex align-items-center py-5 position-relative">
+            <div class="container py-lg-5">
+                <h2 class="section-title font-serif mb-5">My work</h2>
+                <div class="row g-4 text-center">
+                    <!-- Family -->
+                    <div class="col-6 col-md-3">
+                        <a href="#" class="service-link text-decoration-none">
+                            <div class="service-item">
+                                <div class="service-image-wrapper mb-3">
+                                    <img src="assets/nld-family.jpg" alt="Family Photography" class="img-fluid service-img">
+                                </div>
+                                <h5 class="service-title font-serif">Family</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Weddings -->
+                    <div class="col-6 col-md-3">
+                        <a href="#" class="service-link text-decoration-none">
+                            <div class="service-item">
+                                <div class="service-image-wrapper mb-3">
+                                    <img src="assets/luda-wedding.jpg" alt="Wedding Photography" class="img-fluid service-img">
+                                </div>
+                                <h5 class="service-title font-serif">Weddings</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Couples -->
+                    <div class="col-6 col-md-3">
+                        <a href="#" class="service-link text-decoration-none">
+                            <div class="service-item">
+                                <div class="service-image-wrapper mb-3">
+                                    <img src="assets/janca-coena.jpg" alt="Couples and Engagements" class="img-fluid service-img">
+                                </div>
+                                <h5 class="service-title font-serif">Couples & Engagements</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Events -->
+                    <div class="col-6 col-md-3">
+                        <a href="#" class="service-link text-decoration-none">
+                            <div class="service-item">
+                                <div class="service-image-wrapper mb-3">
+                                    <img src="assets/graduation.jpg" alt="Events Photography" class="img-fluid service-img">
+                                </div>
+                                <h5 class="service-title font-serif">Events</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="contact-section custom-vh-75 position-relative d-flex align-items-end pb-5">
+            <div class="container pb-lg-5">
+                <div class="d-flex justify-content-between align-items-end">
+                    <h2 class="contact-title font-serif m-0">Get in touch</h2>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg rounded-0 px-5 font-serif">Let's connect</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Branding & Socials -->
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <h3 class="brand-font footer-brand mb-3">ankesefotos</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/anke.se.fotos/" target="_blank" class="me-3 text-decoration-none text-dark"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="mailto:anckevdschyff12@gmail.com" class="text-decoration-none text-dark"><i class="bi bi-envelope fs-4"></i></a>
+                    </div>
+                </div>
+                <!-- Navigation -->
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <div class="footer-nav">
+                        <a href="index.html" class="footer-link mx-2">home</a>
+                        <a href="#" class="footer-link mx-2">Gallery</a>
+                        <a href="#" class="footer-link mx-2">About me</a>
+                        <a href="contact.html" class="footer-link mx-2">Contact</a>
+                    </div>
+                </div>
+                <!-- Copyright -->
+                <div class="col-md-4 text-center text-md-end">
+                    <p class="copyright-text mb-0">&copy; All content copyright of ankesefotos Photography 2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
