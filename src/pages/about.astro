@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import { Image } from 'astro:assets';
+import Link from '../components/Link.astro';
 import ankeBriel from '../assets/janca-coena.jpg'; // Using an existing image as a placeholder for Anke
 import kissBw from '../assets/kiss-bw.jpg';
 ---
@@ -59,9 +60,9 @@ import kissBw from '../assets/kiss-bw.jpg';
         <!-- CTA Section -->
         <section class="cta-section text-center py-5">
             <div class="container">
-                <a href="/contact" class="btn btn-dark btn-lg rounded-0 px-5 py-3 font-serif text-uppercase letter-spacing-2">
+                <Link href="/contact" class="btn btn-dark btn-lg rounded-0 px-5 py-3 font-serif text-uppercase letter-spacing-2">
                     Let's tell your story!
-                </a>
+                </Link>
             </div>
         </section>
     </main>
