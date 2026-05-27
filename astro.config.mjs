@@ -3,6 +3,5 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://divitum.github.io",
-    base: "/ankesefotos"
+    site: "https://ankesefotos.co.za"
 });

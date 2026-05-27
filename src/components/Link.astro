@@ -10,8 +10,6 @@ const { href, ...props } = Astro.props;
 // import.meta.env.BASE_URL usually ends with a slash if defined.
 // We strip the trailing slash from base and ensure href starts with a slash for a clean join.
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const normalizedHref = (href.startsWith('/') && !href.startsWith('//'))
-    ? `${base}${href}`
-    : href;
+const normalizedHref = href;
 ---
 <a href={normalizedHref} {...props}><slot /></a>
