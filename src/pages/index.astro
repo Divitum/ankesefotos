@@ -1,6 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import Link from '../components/Link.astro';
 
 // Import images
@@ -11,12 +11,17 @@ import nldFamily from '../assets/nld-family.jpg';
 import ludaWedding from '../assets/luda-wedding.jpg';
 import jancaCoena from '../assets/janca-coena.jpg';
 import graduation from '../assets/graduation.jpg';
+
+const coverBackground = await getImage({
+    src: cover1,
+    format: 'webp'
+});
 ---
 
 <MainLayout title="ankesefotos | Wedding Photography by Anke Briel">
-    <style>
+    <style  define:vars={{ coverUrl: `url("${coverBackground.src}")` }}>
         .hero-section {
-            background-image: url('../assets/cover1.jpg');
+            background-image: var(--coverUrl);
         }
         .contact-section {
             background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/kneeling-bw.jpg');
