@@ -6,6 +6,7 @@ import Link from '../components/Link.astro';
 // Import images
 import kissBw from '../assets/kiss-bw.jpg';
 import kneeling from '../assets/kneeling.jpg';
+import kneelingBw from '../assets/kneeling-bw.jpg';
 import cover1 from '../assets/cover1.jpg';
 import nldFamily from '../assets/nld-family.jpg';
 import ludaWedding from '../assets/luda-wedding.jpg';
@@ -16,15 +17,23 @@ const coverBackground = await getImage({
     src: cover1,
     format: 'webp'
 });
+
+const contactBackground = await getImage({
+    src: kneelingBw,
+    format: 'webp'
+});
 ---
 
 <MainLayout title="ankesefotos | Wedding Photography by Anke Briel">
-    <style  define:vars={{ coverUrl: `url("${coverBackground.src}")` }}>
+    <style  define:vars={{ 
+        coverUrl: `url("${coverBackground.src}")`,
+        contactUrl: `url("${contactBackground.src}")`
+    }}>
         .hero-section {
             background-image: var(--coverUrl);
         }
         .contact-section {
-            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/kneeling-bw.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), var(--contactUrl);
         }
     </style>
     <header class="hero-section">
