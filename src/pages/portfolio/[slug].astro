@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { title, date, location, description, coverImage, testimonial, gallery } = entry.data;
+const { title, date, location, description, coverImage, coverAlt, testimonial, gallery } = entry.data;
 
 const optimizedCover = await getImage({ src: coverImage, format: 'webp' });
 ---
@@ -21,7 +21,7 @@ const optimizedCover = await getImage({ src: coverImage, format: 'webp' });
 <MainLayout title={`${title} | ankesefotos`}>
     <!-- Hero Section -->
     <header class="shoot-hero" style={`background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${optimizedCover.src})`}>
-        <div class="hero-content">
+        <div class="hero-content" role="img" aria-label={coverAlt}>
             <!-- Navbar is absolute-top, so we just provide the background space -->
         </div>
     </header>
@@ -58,7 +58,7 @@ const optimizedCover = await getImage({ src: coverImage, format: 'webp' });
                     return (
                         <div class={columnClass}>
                             <div class={wrapperClass}>
-                                <Image src={item.src} alt={`${title} - ${index}`} class="img-fluid" />
+                                <Image src={item.src} alt={item.alt} class="img-fluid" />
                             </div>
                         </div>
                     );
