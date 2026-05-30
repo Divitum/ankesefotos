@@ -1,0 +1,160 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { getCollection, getEntry } from 'astro:content';
+import { Image, getImage } from 'astro:assets';
+import Link from '../../components/Link.astro';
+
+export async function getStaticPaths() {
+  const shoots = await getCollection('shoots');
+  console.log('Available shoots:', shoots.map(s => s.id));
+  return shoots.map(entry => ({
+    params: { slug: entry.id }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { title, date, location, description, coverImage, testimonial, gallery } = entry.data;
+
+const optimizedCover = await getImage({ src: coverImage, format: 'webp' });
+---
+
+<MainLayout title={`${title} | ankesefotos`}>
+    <!-- Hero Section -->
+    <header class="shoot-hero" style={`background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${optimizedCover.src})`}>
+        <div class="hero-content">
+            <!-- Navbar is absolute-top, so we just provide the background space -->
+        </div>
+    </header>
+
+    <main class="shoot-main py-5">
+        <!-- Metadata Header -->
+        <section class="metadata-section container text-center py-5">
+            <h1 class="brand-font shoot-title mb-3">{title}</h1>
+            <div class="metadata-row d-flex justify-content-center align-items-center mb-4">
+                <span class="meta-item">{date}</span>
+                <span class="meta-divider mx-3">|</span>
+                <span class="meta-item">{location}</span>
+            </div>
+            <div class="description-container col-lg-8 mx-auto mt-5">
+                <p class="font-serif shoot-description opacity-75">{description}</p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section container py-5">
+            <div class="row g-4">
+                {gallery.map((item, index) => {
+                    let columnClass = "col-12 mb-4";
+                    let wrapperClass = "gallery-image-wrapper large shadow-sm";
+                    
+                    if (item.size === 'medium') {
+                        columnClass = "col-md-6 mb-4";
+                        wrapperClass = "gallery-image-wrapper medium shadow-sm";
+                    } else if (item.size === 'small') {
+                        columnClass = "col-6 col-md-3 mb-4";
+                        wrapperClass = "gallery-image-wrapper small shadow-sm";
+                    }
+
+                    return (
+                        <div class={columnClass}>
+                            <div class={wrapperClass}>
+                                <Image src={item.src} alt={`${title} - ${index}`} class="img-fluid" />
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+        </section>
+
+        <!-- Testimonial & CTA -->
+        <section class="testimonial-cta-section py-5 my-5">
+            <div class="container text-center">
+                <div class="col-lg-8 mx-auto">
+                    <div class="testimonial-content mb-5">
+                        <p class="testimonial-quote font-serif italic display-6 mb-4">"{testimonial.quote}"</p>
+                        <span class="testimonial-author font-serif text-uppercase letter-spacing-2 opacity-75">— {testimonial.author}</span>
+                    </div>
+                    
+                    <div class="cta-container mt-5 pt-5">
+                        <Link href="/contact" class="btn btn-dark btn-lg rounded-0 px-5 py-3 font-serif text-uppercase letter-spacing-2">
+                            let's capture your story
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</MainLayout>
+
+<style>
+    .shoot-hero {
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .shoot-title {
+        font-size: 4rem;
+        color: var(--color-text-main);
+    }
+
+    .meta-item {
+        font-family: 'Spectral', serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    .meta-divider {
+        opacity: 0.3;
+    }
+
+    .shoot-description {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .gallery-image-wrapper {
+        overflow: hidden;
+    }
+
+    .gallery-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .gallery-image-wrapper.large {
+        aspect-ratio: 16 / 9;
+    }
+
+    .gallery-image-wrapper.medium {
+        aspect-ratio: 3 / 4;
+    }
+
+    .gallery-image-wrapper.small {
+        aspect-ratio: 3 / 4;
+    }
+
+    .testimonial-quote {
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    .letter-spacing-2 {
+        letter-spacing: 2px;
+    }
+
+    @media (max-width: 767.98px) {
+        .shoot-title {
+            font-size: 2.5rem;
+        }
+        .gallery-image-wrapper.large {
+            aspect-ratio: 4 / 3;
+        }
+        /* Mobile: small and medium both take up 50% width via col-6 */
+    }
+</style>
