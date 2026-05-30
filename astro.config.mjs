@@ -7,5 +7,3 @@ export default defineConfig({
   site: 'https://ankesefotos.co.za',
   integrations: [sitemap()],
 });
-    site: "https://ankesefotos.co.za"
-});
