@@ -35,7 +35,7 @@ To ensure we are always on the same page, we use the following definitions:
 - **Navbar's title:** Refers to the "anke.se.fotos" text in the center of the navbar.
 - **Navbar's links:** Refers to the five navigation links (home, Portfolio, FAQ, About me, Contact) located on either side of the navbar's title.
 - **Instagram:** https://www.instagram.com/anke.se.fotos/
-- **Email:** anckevdschyff12@gmail.com
+- **Email:** ankesefotos@gmail.com
 
 # Project Progress (May 2026)
 The site has been migrated to **Astro**. The following sections have been implemented on the Homepage:
@@ -48,7 +48,7 @@ The site has been migrated to **Astro**. The following sections have been implem
 7. **Services Section:** "my work" title, 4 portrait columns with hover effects linking to future portfolio pages.
 8. **Contact Section:** 75vh height, background `kneeling-bw.jpg`, bottom-aligned CTA.
 9. **Footer:** Social icons (Instagram/Email), navigation links, and copyright info.
-10. **Contact Page:** Fully functional inquiry form with client-side validation, integrated with `MainLayout`. Features custom-styled floating labels (bottom-border only), automatic scrolling to validation errors, and a simulation of email submission.
+10. **Contact Page:** Fully functional inquiry form with client-side validation, integrated with `MainLayout`. Features custom-styled floating labels (bottom-border only), automatic scrolling to validation errors, and integration with a **Supabase Edge Function** for automated email delivery.
 11. **Portfolio Page:** Grid layout showcasing various shoots (portfolio). Uses `col-md-3` for 4 items per row on desktop and `col-6` for mobile. Implements hover scale effects and portrait aspect ratios consistent with the homepage "Services" section.
 12. **About Me Page:** Split layout featuring two story sections with alternating photo alignment. Includes a stylized quote section and a "Let's tell your story!" CTA linking to the Contact page.
 13. **FAQ Page:** Frequently Asked Questions list with minimalist divider lines, bold question titles, and a dedicated email contact footer.

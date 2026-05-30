@@ -61,21 +61,43 @@ export const initContactForm = () => {
         const language = (document.getElementById('language') as HTMLSelectElement).value;
         const message = (document.getElementById('message') as HTMLTextAreaElement).value;
 
-        const subject = `New ${shootType} inquiry from ${name}`;
-        const body = `
-First name and last name: ${name}
-Email address: ${email}
-Type of shoot: ${shootType}
-Location: ${location}
-Date: ${date}
-Preferred language: ${language}
-Message: ${message}
-        `.trim();
+        const data = {
+            name,
+            email,
+            shootType,
+            location,
+            date,
+            language,
+            message
+        };
 
-        console.log('Subject:', subject);
-        console.log('Body:', body);
+        submitBtn.disabled = true;
+        const originalBtnText = submitBtn.innerText;
+        submitBtn.innerText = 'Sending...';
 
-        alert('Thank you! Your inquiry has been sent to the console.');
+        fetch('https://bkdsqxuyqiovhptdvnqq.supabase.co/functions/v1/send-mail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Thank you! Your inquiry has been sent successfully.');
+                form.reset();
+            } else {
+                alert('Oops! There was a problem sending your inquiry. Please try again later.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Oops! There was a problem sending your inquiry. Please try again later.');
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerText = originalBtnText;
+        });
     });
 };
 
