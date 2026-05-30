@@ -1,7 +1,7 @@
-# ankesefotos
+# anke.se.fotos
 
 ## Project Overview
-**ankesefotos** is the brand for photographer **Anke Briel**. This project is a simple, elegant wedding photography website designed to showcase her portfolio and services.
+**anke.se.fotos** is the brand for photographer **Anke Briel**. This project is a simple, elegant wedding photography website designed to showcase her portfolio and services.
 
 **Deployed URL:** https://ankesefotos.co.za
 
@@ -32,7 +32,7 @@
 ## Shared Language
 To ensure we are always on the same page, we use the following definitions:
 - **MainLayout:** The primary layout shell containing the `<Navbar />`, `<slot />`, and `<Footer />`.
-- **Navbar's title:** Refers to the "ankesefotos" text in the center of the navbar.
+- **Navbar's title:** Refers to the "anke.se.fotos" text in the center of the navbar.
 - **Navbar's links:** Refers to the five navigation links (home, Portfolio, FAQ, About me, Contact) located on either side of the navbar's title.
 - **Instagram:** https://www.instagram.com/anke.se.fotos/
 - **Email:** anckevdschyff12@gmail.com
@@ -41,7 +41,7 @@ To ensure we are always on the same page, we use the following definitions:
 The site has been migrated to **Astro**. The following sections have been implemented on the Homepage:
 1. **MainLayout:** Centralized layout with dynamic titles and global styles.
 2. **Hero Section:** Full-viewport height with `cover1.jpg`, transparent absolute navbar.
-3. **Navbar:** Centered "ankesefotos" in MADE Mirage (lowercase), uppercase Spectral links.
+3. **Navbar:** Centered "anke.se.fotos" in MADE Mirage (lowercase), uppercase Spectral links.
 4. **About Section:** Split 50/50 with `kiss-bw.jpg` and introduction text.
 5. **Testimonials:** 65vh height, 30/70 split (text/image) with a functional Bootstrap carousel.
 6. **Verse Section:** 60vh height, centered Bible verse (Colossians 3:17) in Tangerine (medieval cursive).

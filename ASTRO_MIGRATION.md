@@ -1,4 +1,4 @@
-# Astro Migration Plan: ankesefotos
+# Astro Migration Plan: anke.se.fotos
 
 This document outlines the step-by-step plan to migrate the current static HTML project to **Astro**. This move will improve SEO, enable reusable components, and provide superior image optimization for photography.
 

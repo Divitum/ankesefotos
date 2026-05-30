@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | ankesefotos</title>
+    <title>Contact | anke.se.fotos</title>
     <link rel="icon" href="assets/cross-2-svgrepo-com.svg" type="image/svg+xml">
     
     <!-- Bootstrap CSS -->
@@ -62,7 +62,7 @@
             <div class="row align-items-center">
                 <!-- Branding & Socials -->
                 <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-                    <h3 class="brand-font footer-brand mb-3">ankesefotos</h3>
+                    <h3 class="brand-font footer-brand mb-3">anke.se.fotos</h3>
                     <div class="social-links">
                         <a href="https://www.instagram.com/anke.se.fotos/" target="_blank" class="me-3 text-decoration-none text-dark"><i class="bi bi-instagram fs-4"></i></a>
                         <a href="mailto:anckevdschyff12@gmail.com" class="text-decoration-none text-dark"><i class="bi bi-envelope fs-4"></i></a>
@@ -79,7 +79,7 @@
                 </div>
                 <!-- Copyright -->
                 <div class="col-md-4 text-center text-md-end">
-                    <p class="copyright-text mb-0">&copy; All content copyright of ankesefotos Photography 2026</p>
+                    <p class="copyright-text mb-0">&copy; All content copyright of anke.se.fotos Photography 2026</p>
                 </div>
             </div>
         </div>

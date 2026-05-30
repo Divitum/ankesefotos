@@ -1,9 +1,9 @@
-# SEO Checklist: ankesefotos
+# SEO Checklist: anke.se.fotos
 
-A comprehensive guide to optimizing the ankesefotos website for search engines.
+A comprehensive guide to optimizing the anke.se.fotos website for search engines.
 
 ## 1. On-Page SEO (Content & Meta)
-- [ ] **Unique Page Titles:** Every page must have a unique `<title>` tag including keywords (e.g., "Wedding Photographer Pretoria | ankesefotos").
+- [ ] **Unique Page Titles:** Every page must have a unique `<title>` tag including keywords (e.g., "Wedding Photographer Pretoria | anke.se.fotos").
 - [ ] **Meta Descriptions:** Compelling 150-160 character summaries for every page to improve click-through rates.
 - [ ] **Semantic HTML:** Ensure `<h1>` is used for the main title of each page, `<h2>` for sub-sections, etc.
 - [ ] **Alt Text for Images:** Crucial for photographers. Every image needs a descriptive `alt` attribute (e.g., `alt="Bride and groom sunset portrait at Oakfield Farm wedding venue"`).
@@ -28,7 +28,7 @@ A comprehensive guide to optimizing the ankesefotos website for search engines.
 ## 5. Social & Backlinks
 ## 6. Strategic Implementation (In Progress)
 - [ ] **Dynamic Meta Tags:** Automate `<title>` and `<meta description>` for every portfolio shoot.
-    - Format: `{title} | {Category} in {location} | ankesefotos`
+    - Format: `{title} | {Category} in {location} | anke.se.fotos`
     - Description: Auto-extract first 150 chars from the photographer's narrative.
 - [ ] **High-Value Keyword Injection:**
     - **Alt Text:** Don't just describe the photo; include locations and venue names (e.g., "Bride and Groom at Oakfield Farm, Pretoria").

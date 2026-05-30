@@ -1,11 +1,11 @@
 # Implementation Plan: Google Apps Script Mailing
 
-This plan outlines the steps to integrate a Google Apps Script (GAS) backend to handle contact form submissions for the **ankesefotos** website. This approach allows the static GitHub Pages site to send emails securely without exposing API keys.
+This plan outlines the steps to integrate a Google Apps Script (GAS) backend to handle contact form submissions for the **anke.se.fotos** website. This approach allows the static GitHub Pages site to send emails securely without exposing API keys.
 
 ---
 
 ## Phase 0: Dedicated System Account (Recommended)
-1.  **Create Account:** Set up a new, dedicated Gmail account (e.g., `ankesefotos.web@gmail.com`). 
+1.  **Create Account:** Set up a new, dedicated Gmail account (e.g., `anke.se.fotos.web@gmail.com`). 
 2.  **Purpose:** This account will act as the "sender." It keeps the photographer's personal inbox clean and makes future handover easier.
 3.  **Log In:** Use this new account for all steps in Phase 1.
 

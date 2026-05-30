@@ -18,7 +18,7 @@ const { title, date, location, description, coverImage, coverAlt, testimonial, g
 const optimizedCover = await getImage({ src: coverImage, format: 'webp' });
 ---
 
-<MainLayout title={`${title} | ankesefotos`}>
+<MainLayout title={`${title} | anke.se.fotos`}>
     <!-- Hero Section -->
     <header class="shoot-hero" style={`background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${optimizedCover.src})`}>
         <div class="hero-content" role="img" aria-label={coverAlt}>
