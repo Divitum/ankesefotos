@@ -1,0 +1,27 @@
+---
+title: "luda & stefan"
+date: "October 2024"
+location: "Pretoria, South Africa"
+description: "There is something truly magical about the light in the late afternoon. Luda and Stefan's wedding was a celebration of pure joy and intimate moments. From the quiet whispers before the ceremony to the laughter that filled the air during their portrait session, every second was a testament to their beautiful connection. It was an honor to document their first day as husband and wife."
+coverImage: "../../assets/luda-wedding.jpg"
+testimonial:
+  quote: "Anke captured our wedding day with such grace and beauty. Every photo feels like a work of art, and we couldn't be happier with the memories she preserved for us."
+  author: "Luda & Stefan"
+gallery:
+  - src: "../../assets/cover1.jpg"
+    size: "large"
+  - src: "../../assets/kiss-bw.jpg"
+    size: "medium"
+  - src: "../../assets/kneeling.jpg"
+    size: "medium"
+  - src: "../../assets/janca-coena.jpg"
+    size: "large"
+  - src: "../../assets/nld-family.jpg"
+    size: "small"
+  - src: "../../assets/graduation.jpg"
+    size: "small"
+  - src: "../../assets/luda-wedding.jpg"
+    size: "small"
+  - src: "../../assets/cover1.jpg"
+    size: "small"
+---

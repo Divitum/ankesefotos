@@ -13,14 +13,14 @@ import cover1 from '../assets/cover1.jpg';
 import kneelingBw from '../assets/kneeling-bw.jpg';
 
 const shoots = [
-    { id: 1, title: "Luda & Stefan", image: ludaWedding, category: "Wedding" },
-    { id: 2, title: "Janca & Coena", image: jancaCoena, category: "Couples" },
-    { id: 3, title: "NLD Family", image: nldFamily, category: "Family" },
-    { id: 4, title: "Class of 2024", image: graduation, category: "Events" },
-    { id: 5, title: "The Kiss", image: kissBw, category: "Couples" },
-    { id: 6, title: "Grace", image: kneeling, category: "Portraits" },
-    { id: 7, title: "Elegance", image: cover1, category: "Wedding" },
-    { id: 8, title: "Quiet Moments", image: kneelingBw, category: "Portraits" }
+    { id: 1, title: "Luda & Stefan", image: ludaWedding, category: "Wedding", slug: "luda-stefan" },
+    { id: 2, title: "Janca & Coena", image: jancaCoena, category: "Couples", slug: "luda-stefan" }, // Placeholder slug
+    { id: 3, title: "NLD Family", image: nldFamily, category: "Family", slug: "luda-stefan" }, // Placeholder slug
+    { id: 4, title: "Class of 2024", image: graduation, category: "Events", slug: "luda-stefan" }, // Placeholder slug
+    { id: 5, title: "The Kiss", image: kissBw, category: "Couples", slug: "luda-stefan" }, // Placeholder slug
+    { id: 6, title: "Grace", image: kneeling, category: "Portraits", slug: "luda-stefan" }, // Placeholder slug
+    { id: 7, title: "Elegance", image: cover1, category: "Wedding", slug: "luda-stefan" }, // Placeholder slug
+    { id: 8, title: "Quiet Moments", image: kneelingBw, category: "Portraits", slug: "luda-stefan" } // Placeholder slug
 ];
 ---
 
@@ -28,8 +28,8 @@ const shoots = [
     <header class="contact-hero-scaffold">
     </header>
 
-    <main class="py-5 mt-5">
-        <div class="container py-5">
+    <main class="py-4 mt-3">
+        <div class="container py-4">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="portfolio-header text-center mb-5">
@@ -40,7 +40,7 @@ const shoots = [
                     <div class="row g-4">
                         {shoots.map(shoot => (
                             <div class="col-6 col-md-3">
-                                <a href="#" class="service-link text-decoration-none">
+                                <a href={`/portfolio/${shoot.slug}`} class="service-link text-decoration-none">
                                     <div class="service-item">
                                         <div class="service-image-wrapper mb-3">
                                             <Image src={shoot.image} alt={shoot.title} class="img-fluid service-img" />
